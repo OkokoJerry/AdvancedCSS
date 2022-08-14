@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced CSS</title>
+	<style type="text/css">
+		body{
+			line-height: 1;
+			margin: 0;
+		}
+		.nav{
+			padding-top: 15px;
+			padding-bottom: 10px;
+			background-color: lightgrey;
+			overflow: hidden;
+		}
+		.a{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: black;
+			font: constantia;
+			padding-left: 15px;
+			font-size: 20px;
+			}
+			.a:hover{
+				font-weight: bold;
+			}
+		.bove{
+			display:none;
+			}
+			.nav2{
+				float: right;
+				padding-right: 15px;
+			}
+		.all{
+			display: grid;
+			background:linear-gradient(to left, blue, lightblue);
+			grid-template-columns: 40% 60%;
+			margin: auto;
+		}
+		iframe.img{
+			display: block;
+			margin-top: 60px;
+			height: 250px;
+			width: 85%;
+		}
+		.para{
+			padding: 45px 25px;
+			padding-left: 60px;
+		}
+		h1{
+			font-family: calibri;
+			line-height: 25px;
+		}
+		h1, label{
+			color: white;
+			font-family: "times new roman";
+			font-weight: bold;
+		}
+		input{
+			border: none;
+			background-color: white;
+			border-radius: 3px;
+			height: 25px;
+			width: 80%;
+		}
+		.main{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			column-gap: 10px;
+			margin: 7px;
+			padding-bottom: 70px;
+		}
+		.body{
+			text-align: center;
+			box-shadow: 0 0 7px black;
+		}
+		.head{
+			color: black;
+			text-align: center;
+			padding-bottom: 60px;
+			padding-top: 20px;
+			line-height:45px;
+		}
+		button{
+			color:white;
+			background-color: blue;
+			border:none;
+			height: 50px;
+			text-align: center;
+			width:150px;
+			border-radius: 10px;
+			display: block;
+			margin: auto;
+		}
+		button:hover{
+			font-weight: bold;
+		}
+		div p.para2{
+			margin-left: 15px;
+			text-align: left;
+		}
+		div img.img2{
+			height: 150px;
+			width: 250px;
+			box-shadow: 0 0 9px black;
+			margin-right: 80px;
+			margin-left: 60px;
+			border:solid black 1px;
+			padding:4.5px;
+			border-radius: 6px;
+		}
+		div.cont{
+			margin-top: 100px;
+			display: flex;
+		}
+		.footer{
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			padding-top: 50px;
+			text-align: center;
+		}
+		.foots{
+			display: block;
+			padding: 5px;
+			text-decoration: none;
+			color: white;
+		}
+		.foot1 a:hover{
+			color: black;
+			background-color: white;
+		}
+		footer{
+			background-color:rgb(40, 50, 70);
+			color: white;
+			height: 250px;
+			margin-top: 100px;
+		}
+		div.foot1 h4{
+			text-align: center;
+			text-transform: uppercase;
+		}
+		@media(max-width:720px){
+		.a.home, .a.bove{
+			display: inline;
+		}
+		.a.bove{
+			float: right;
+			margin-right: 5px;
+		}
+		.all{
+				display: block;
+				padding-bottom: 50px;
+			}
+		div.para{
+				width:70%;
+			}
+		div iframe.img{
+				margin: auto;
+				padding-top:0;
+			}
+			.a{
+			display:none;
+			}
+		.main{
+				display: block;
+				width: 100%;
+				margin: auto;
+			}
+		.body{
+				margin: 7px;
+			}
+		.drop a.a:not(.bove){
+				float: none;
+				display: block;
+				margin-bottom: 15px;
+				text-align: left;
+				width:25%;
+			}
+			.drop a.a:not(.bove):hover{
+				border-bottom:solid 2px black;
+			}
+		.drop a.bove{
+				position: absolute;
+				top:7px;
+				right:5px;
+			}
+	}
+	</style>
+	<script type="text/javascript">
+	function drop() {
+		var x = document.getElementById('click')
+		if (x.className === 'nav') {
+			x.className +=  ' drop';
+		} else {
+			x.className = 'nav';
+		}
+	}
+</script>
+</head>
+<body>
+	<nav class="nav" id="click">
+		<a href="#" class="a home">home</a>
+		<a href="#" class="a">news</a>
+		<a href="#" class="a">contact</a>
+		<a href="#" class="a">about</a>
+		<a href="#" class="a nav2">login</a>
+		<a href="#" class="a nav2">sign up</a>
+		<a href="javascript:void(0);" class="a bove" onclick="drop()">&#9776;</a>
+	</nav>
+<div class="all">
+	<div class="para">
+		<h1>
+			Crazy Radness 
+		</h1>
+		<h1>
+			Made for developers
+		</h1>
+		<form>
+		<label>Username</label>
+		<br>
+		<input type="text" name="" placeholder="Username">
+		<br>
+		<br>
+		<label>Password</label>
+		<br>
+		<input type="password" name="" placeholder="Password">
+		<br>
+		<br>
+		<br>
+		<br>
+		</form>
+	</div>
+	<div>
+		<iframe src="https://www.youtube.com/embed/FkNfBcpUvfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img"></iframe>
+	</div>
+</div>
+<br>
+<br>
+				<h1 class="head">The Standards of Awesome</h1>
+<div class="main">
+	<div class="body">
+		<img src="devslopes.webp">
+		<h2>Chat With Me</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+	</div>
+	<div class="body">
+		<img src="devslopes.webp">
+		<h2>Learn To Code</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+	</div>
+	<div class="body">
+		<img src="devslopes.webp">
+		<h2>Build an Empire</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+	</div>
+</div>
+<button>Learn More</button>
+<div class="cont">
+<p class="para2">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<img src="devslopes.png" class="img2">
+</div>
+<footer>
+	<div class="footer">
+		<div class="foot1">
+			<h4>Contacts</h4>
+			<a href="#" class="foots">About</a>
+			<a href="#" class="foots">Blogs</a>
+			<a href="#" class="foots">Careers</a>
+		</div>
+		<div class="foot1">
+			<h4>Products</h4>
+			<a href="#" class="foots">Computers</a>
+			<a href="#" class="foots">iPads</a>
+			<a href="#" class="foots">iPhones</a>
+		</div>
+		<div class="foot1">
+			<h4>Learn More</h4>
+			<a href="#" class="foots">Developers</a>
+			<a href="#" class="foots">Designers</a>
+			<a href="#" class="foots">Hackers</a>
+		</div>
+		<div class="foot1">
+			<h4>Support</h4>
+			<a href="#" class="foots">Help</a>
+			<a href="#" class="foots">QA</a>
+			<a href="#" class="foots">Contact</a>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
